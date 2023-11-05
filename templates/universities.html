@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Texon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Texon</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown" style="float: right">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" style="float: right" href="/universities">Universities</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" style="">
+      <div class="row">
+        <div class="col">
+
+        </div>
+        <div class="col-8">
+          <div style="padding: 2rem">
+            <h2 style="text-align: center">Send your application to {{ university.name }}</h2>
+              <br>
+            <form method="POST">
+              {% csrf_token %}
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="first_name" class="form-label">First name</label>
+                <input type="text" class="form-control" id="first_name" name="first_name">
+              </div>
+              <div class="mb-3">
+                <label for="last_name" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="last_name" name="last_name">
+              </div>
+              <div class="mb-3">
+                <label for="age" class="form-label">Age</label>
+                <input type="number" class="form-control" id="age" name="age">
+              </div>
+              <div class="mb-3">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" class="form-control" id="country" name="country">
+              </div>
+              <div class="mb-3">
+                <label for="city" class="form-label">City</label>
+                <input type="text" class="form-control" id="city" name="city">
+              </div>
+              <div class="mb-3">
+                <label for="school" class="form-label">School</label>
+                <input type="text" class="form-control" id="school" name="school">
+              </div>
+              <div class="mb-3">
+                <label for="graduation_month" class="form-label">Graduation month</label>
+                <input type="text" class="form-control" id="graduation_month" name="graduation_m">
+              </div>
+              <div class="mb-3">
+                <label for="graduation_year" class="form-label">Graduation year</label>
+                <input type="text" class="form-control" id="graduation_year" name="graduation_y">
+              </div>
+              <div class="mb-3">
+                <label for="budget" class="form-label">Budget</label>
+                <input type="number" class="form-control" id="budget" name="budget">
+              </div>
+              <div class="mb-3">
+                <label for="gpa" class="form-label">GPA</label>
+                <input type="text" class="form-control" id="gpa" name="gpa">
+              </div>
+              <div class="mb-3">
+                <label for="utr" class="form-label">UTR</label>
+                <input type="text" class="form-control" id="utr" name="utr">
+              </div>
+              <div class="mb-3">
+                <label for="utr_link" class="form-label">Link to your UTR profile</label>
+                <input type="url" class="form-control" id="utr_link" name="utr_link">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="col">
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-dark text-white" style="background-color: darkgrey; margin-top: 50px; height: 600px">
+        <div class="row" style="padding: 9rem">
+            <div class="col">
+
+            </div>
+
+            <div class="col-8" style="text-align: center">
+                <h1>About</h1>
+                <br>
+                <br>
+                <h4>Texon - is a service that enables you to apply for a tennis scholarship in any university by filling out a short application.</h4>
+
+            </div>
+
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-body text-dark" style="background-color: darkgrey; margin-top: 50px; height: 400px">
+        <div class="row" style="padding: 5rem">
+            <div class="col">
+
+            </div>
+
+            <div class="col-6">
+                <h1 style="text-align: center">Contacts</h1>
+                <br>
+                <h4>Valikhan Dyussembayev</h4>
+                <h6>Founder, CEO</h6>
+                <p>Email: vdyussembayev@gmail.com</p>
+
+            </div>
+
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-dark text-white" style="height: 80px">
+        <p style="margin: 1rem; padding: 1rem">All rights reserved</p>
+
+    </div>
+
+
+
+
+</body>
+</html>
