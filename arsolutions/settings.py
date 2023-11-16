@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = "django-insecure-fm4c25!^1f3ad4=&8$dyjfd_f263j2+%^2=!d4emp!r*sorf-=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.recruitingautomated.com', '167.172.97.98', 'localhost']
+ALLOWED_HOSTS = ['.recruitingautomated.com', '*']
 
 
 # Application definition
@@ -81,8 +82,8 @@ DATABASES = {
         'NAME': 'arsoldb',
         'USER': 'arsoldbuser',
         'PASSWORD': '10042004',
-        'HOST': 'localhost',
-        'PORT': '',
+        'HOST': 'recruitingautomated.com',
+        'PORT': '5432',
     }
 }
 
@@ -128,5 +129,11 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-import os
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.mailersend.net'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'mlsn.670e1a5f2968defe3861247f21650624867f07e7cc697b9fb659a1a994045c4a'  # Mailersend API Key
+EMAIL_HOST_PASSWORD = 'mlsn.670e1a5f2968defe3861247f21650624867f07e7cc697b9fb659a1a994045c4a'  # API Key secret
